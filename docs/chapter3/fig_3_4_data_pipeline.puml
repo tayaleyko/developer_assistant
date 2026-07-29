@@ -1,0 +1,44 @@
+@startuml fig_3_4_data_pipeline
+' Рисунок 3.4.2 — Пайплайн данных для cGAN (упрощённая схема)
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+top to bottom direction
+
+title Рисунок 3.4.2 — Пайплайн подготовки данных\nдля обучения генерации UI-шаблонов
+
+rectangle "Внешние датасеты UI\n(RICO, UIBert…)" as S1 #E3F2FD
+note right of S1
+  скриншот + layout_boxes
+  + components
+  **перспектива**
+end note
+
+rectangle "site_analyzer.py\nURL: w4, w_d4" as S2 #B3E5FC
+note right of S2
+  HTML → технологии,
+  шрифты, UI-kit, nav;
+  palette[5] (KMeans)
+  **реализовано**
+end note
+
+rectangle "Опрос + stack_info.py\nquestions.json, w2, w_d0…" as S3 #C5CAE9
+note right of S3
+  тип, сфера, стиль,
+  nav; эталонный design
+  **реализовано**
+end note
+
+rectangle "Сборка записи\n(табл. 3.4.1)" as MERGE #C8E6C9
+database "Единый датасет" as DS #FFF9C4
+rectangle "Train / Val / Test\n70 · 15 · 15" as SPLIT #FFE0B2
+rectangle "Обучение cGAN\n(перспектива)" as CGAN #E1BEE7
+
+S1 --> MERGE
+S2 --> MERGE
+S3 --> MERGE
+MERGE --> DS
+DS --> SPLIT
+SPLIT --> CGAN
+
+@enduml

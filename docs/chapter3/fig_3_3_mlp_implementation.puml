@@ -1,0 +1,101 @@
+@startuml fig_3_3_mlp_implementation
+' Рисунок 3.X — Детализация рекомендательного модуля
+' Глава 3, §3.3
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam linetype ortho
+skinparam ArrowColor #455A64
+skinparam packageBorderStyle dashed
+skinparam NoteBackgroundColor #FFFDE7
+
+left to right direction
+
+title Рисунок 3.X — Детализация рекомендательного модуля
+
+' ── 1–2. Точка входа ────────────────────────────────────────────────
+
+rectangle "**1. Данные опроса**\nAppState.answers\n(website / desktop)" as IN #E3F2FD
+
+rectangle "**2. Экран результатов**\nResultScreen\nвыбор режима" as UI #BBDEFB
+
+IN --> UI
+
+' ── 3–4. Общая подготовка (оба режима) ───────────────────────────────
+
+rectangle "**3. Нормализация ответов**\nплоский словарь {id → value}\n`ai_stub`" as FLAT #E1BEE7
+
+rectangle "**4. Кодирование признаков**\nSurveyEncoder\none-hot → вектор **X**" as ENC #D1C4E9
+
+UI --> FLAT : **get_offline_result**\nили **get_online_result**
+FLAT --> ENC
+
+' ── 5–6. Два режима ──────────────────────────────────────────────────
+
+together {
+  package " **Офлайн** — автономный режим " as POFF #E8F5E9 {
+    rectangle "**5a. Ансамбль MLP**\ntech-модель + design-модель\nусреднение predict_proba" as ENS #C8E6C9
+    rectangle "**6a. ML-результат**\n**label** — рекомендуемый стек\n**top-3** — альтернативы" as ROFF #A5D6A7
+    ENS --> ROFF
+  }
+
+  package " **Онлайн** — режим с AI " as PON #FFF8E1 {
+    rectangle "**5b. MLP tech**\nодна модель\n→ **label** стека" as TECH #FFE082
+  }
+}
+
+rectangle "**6b. Анализ сайта**\nsite_analyzer\nURL → технологии, палитра" as NET #FFCC80
+
+ENC --> ENS : офлайн
+ENC --> TECH : онлайн
+FLAT ..> NET : URL из ответов\n(только онлайн)
+
+' ── 7–8. Обогащение и выход ──────────────────────────────────────────
+
+rectangle "**7. Справочник стеков**\nstack_info\nтекстовое описание\nстека и дизайна" as STK #B2DFDB
+
+rectangle "**8. Итоговый отчёт**\nкарточки на ResultScreen\n(технологии, дизайн, …)" as OUT #E3F2FD
+
+ROFF --> STK
+TECH --> STK
+STK --> OUT
+NET --> OUT : дополнение\n(только онлайн)
+OUT --> UI : показ\nна экране
+
+' ── Подготовка моделей (фоновый процесс) ─────────────────────────────
+
+together {
+  storage "data/*.csv\nобучающая выборка" as CSV #ECEFF1
+  storage "models/*.pkl\nкэш MLP + encoder" as PKL #ECEFF1
+}
+
+rectangle "Обучение MLPClassifier\n(при первом запуске,\nесли нет кэша)" as TRAIN #F3E5F5
+
+CSV -down-> TRAIN : fit(X, y)
+TRAIN -down-> PKL : joblib.dump
+PKL .up.> ENS : predict_proba
+PKL .up.> TECH : predict
+
+note bottom of ENS
+  **Пример (website):**
+  tech: 75 → 128 → 64 → 12
+  design: 40 → 128 → 64 → 12
+  → argmax после усреднения
+end note
+
+note bottom of TECH
+  Без design-ансамбля;
+  online дополняется
+  данными site_analyzer
+end note
+
+note as LEGEND #FFFDE7
+  **Что получает комиссия на выходе:**
+  • **офлайн** — стек, top-3, дизайн (без интернета);
+  • **онлайн** — стек, дизайн, похожие проекты,
+    анализ URL и палитра (если указан URL).
+end note
+
+LEGEND .. OUT
+
+@enduml

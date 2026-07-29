@@ -1,0 +1,40 @@
+@startuml fig_3_3_mlp_architecture_website
+' Рисунок 3.X — Архитектура MLP (website)
+' Глава 3, §3.3
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+
+title Рисунок 3.X — Архитектура MLPClassifier\n(направление website: 75 → 128 → 64 → 12)
+
+rectangle "Входной слой\n75 признаков\n(one-hot ответов опроса)" as IN #E3F2FD
+
+rectangle "Скрытый слой 1\n128 нейронов\nReLU" as H1 #C8E6C9
+
+rectangle "Скрытый слой 2\n64 нейрона\nReLU" as H2 #A5D6A7
+
+rectangle "Выходной слой\n12 классов\n(метки стеков)\nsoftmax" as OUT #FFF9C4
+
+IN -right-> H1 : веса W1\n+ bias
+H1 -right-> H2 : веса W2\n+ bias
+H2 -right-> OUT : веса W3\n+ bias
+
+note bottom of IN
+  SurveyEncoder.encode_answers()
+  pandas.get_dummies + reindex
+end note
+
+note bottom of OUT
+  Примеры меток:
+  nextjs_vercel, wordpress_php,
+  vue_laravel_mysql, gatsby_netlify, ...
+end note
+
+note as N1
+  **Обучение:** Adam, lr=0.001,
+  batch=32, alpha=0.001 (L2),
+  early_stopping, max_iter=300
+  **Параметров:** ~18 764
+end note
+
+@enduml

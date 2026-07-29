@@ -1,0 +1,27 @@
+@startuml
+title Архитектура системы
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+component "Клиентский\nинтерфейс" as UI #E8EAF6
+component "Модуль\nопроса" as SURVEY #E3F2FD
+component "Кодирование\nпризнаков" as ENC #FFF3E0
+component "Рекомендательное\nядро" as CORE #E8F5E9
+component "Обогащение\nрекомендаций" as ENRICH #F3E5F5
+component "Сетевой\nанализ" as NET #FFEBEE
+database "Хранилище\nданных" as DB #ECEFF1
+
+UI --> SURVEY
+SURVEY --> ENC
+ENC --> CORE
+CORE --> ENRICH
+ENRICH --> UI
+
+DB ..> SURVEY
+DB ..> CORE
+DB ..> ENRICH
+
+ENRICH --> NET : онлайн
+
+@enduml

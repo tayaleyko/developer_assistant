@@ -1,0 +1,27 @@
+@startuml
+title Потоки данных приложения
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+top to bottom direction
+
+rectangle "Входные данные\nanswers + project_type" as IN #E3F2FD
+rectangle "Преобразованные данные\nflat_answers + encoded_vector" as PREP #C8E6C9
+
+rectangle "Offline ветка\nlabel + top3 + stack + design" as OFF #FFF9C4
+rectangle "Online ветка\nlabel + stack + design + similar_sites" as ON #FFE0B2
+rectangle "URL-анализ (опционально)\nsite_analysis + palette" as URL #F8BBD0
+
+rectangle "Единый result dict" as RES #E8EAF6
+rectangle "Экран результата\n(ResultScreen)" as OUT #D1C4E9
+
+IN --> PREP
+PREP --> OFF : offline
+PREP --> ON : online
+ON --> URL : если указан URL
+OFF --> RES
+ON --> RES
+URL --> RES
+RES --> OUT
+
+@enduml

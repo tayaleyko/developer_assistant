@@ -1,0 +1,43 @@
+@startuml
+title Онлайн-режим и автономный режим
+
+skinparam backgroundColor #FEFEFE
+skinparam rectangleRoundCorner 8
+skinparam rectangleFontSize 13
+skinparam arrowColor #333333
+skinparam arrowFontSize 11
+
+rectangle "Пользователь вводит\nпараметры проекта" as S1 #E8EAF6
+rectangle "Система кодирует и\nструктурирует данные" as S2 #E8EAF6
+rectangle "Нейросетевой модуль\nформирует рекомендации" as S3 #E8EAF6
+rectangle "Система выводит\nрекомендации и отчёт" as S4 #E8EAF6
+
+S1 -down-> S2
+S2 -down-> S3
+
+rectangle "Пользователь указывает\nвнешний веб-ресурс" as O1 #FFEBEE
+rectangle "Система загружает страницу\nи анализирует\nтехнологические признаки" as O2 #FFEBEE
+rectangle "Палитра цветов\nи список похожих проектов" as O3 #FFEBEE
+rectangle "Рекомендации\n+ сетевой анализ" as O4 #FFCDD2
+
+O1 -right-> O2
+O2 -right-> O3
+O3 -down-> O4
+
+S1 -up-> O1 : онлайн
+S3 -right-> O4
+O4 -down-> S4
+S3 -down-> S4 : автономный
+
+note top of O1
+  Онлайн-режим
+  (с подключением к сети)
+end note
+
+note bottom of S3
+  Автономный режим
+  без загрузки и анализа
+  внешнего ресурса
+end note
+
+@enduml

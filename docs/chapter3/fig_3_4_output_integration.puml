@@ -1,0 +1,24 @@
+@startuml fig_3_4_output_integration
+' Рисунок 3.4.4 — Интеграция результата генерации в приложение
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Рисунок 3.4.4 — Форматы выхода генеративного модуля\nи интеграция в приложение
+
+rectangle "Сгенерированный\nмакет (PNG/SVG)" as M #FFF9C4
+rectangle "Семантический\nlayout graph" as G #C8E6C9
+rectangle "Проверка структуры\nпересечения, выравнивания" as CHK #FFCDD2
+rectangle "JSON-описание\nэлементов и координат" as J #E3F2FD
+rectangle "Рендер в UI\nResultScreen" as R #E8EAF6
+rectangle "Экспорт во внешние\nинструменты (Figma/HTML)" as X #E1BEE7
+
+M --> G
+G --> CHK
+CHK --> J : структура корректна
+CHK ..> G : повторная генерация\nпри ошибках
+J --> R
+J --> X
+
+@enduml

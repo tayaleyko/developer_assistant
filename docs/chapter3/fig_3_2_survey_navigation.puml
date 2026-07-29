@@ -1,0 +1,39 @@
+@startuml fig_3_2_survey_navigation
+' Рисунок 3.X — Навигация опроса
+' Глава 3, §3.2
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1565C0
+  FontSize 11
+}
+
+title Рисунок 3.X — Схема навигации опроса
+
+' Горизонтальная компоновка
+left to right direction
+
+(*) --> "Запуск приложения"
+--> "Выбор типа проекта\n(website/desktop)"
+
+if "Тип выбран?" then
+  -->[да] "Экран блоков"
+else
+  -->[нет] (*)
+endif
+
+"Экран блоков" --> "Опрос блока\n(вопросы)"
+--> "Сохранение ответов"
+--> "Экран блоков"
+
+if "Есть завершенный блок?" then
+  -->[да] "Экран результатов"
+  --> (*)
+else
+  -->[нет] "Продолжение опроса"
+  --> "Опрос блока\n(вопросы)"
+endif
+
+@enduml

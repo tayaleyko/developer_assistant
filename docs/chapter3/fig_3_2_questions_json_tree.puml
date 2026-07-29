@@ -1,0 +1,60 @@
+@startuml fig_3_2_questions_json_tree
+' Рисунок 3.X — Структура questions.json
+' Глава 3, §3.2
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam rectangle {
+  RoundCorner 6
+  FontSize 11
+}
+
+title Рисунок 3.X — Фрагмент структуры файла questions.json
+
+rectangle "questions.json" as root #FFF8E1
+
+rectangle "initialQuestion\n--\nid, text, type\noptions (website / desktop)" as iq #E8F5E9
+
+rectangle "website\n--\nblocks[8]" as ws #E3F2FD
+rectangle "desktop\n--\nblocks[8]" as ds #E3F2FD
+
+rectangle "block\n--\nid, title, order\nquestions[]" as blk #C8E6C9
+
+rectangle "question\n--\nid (w* / d*)\ntext, type, options[]\nhint, hasTextInput" as q #A5D6A7
+
+rectangle "option\n--\nvalue, label\nhint, textPlaceholder\nupload" as opt #81C784
+
+root -down-> iq
+root -down-> ws
+root -down-> ds
+ws -down-> blk
+ds -down-> blk
+blk -down-> q
+q -down-> opt
+
+note right of ws
+  8 блоков:
+  Общая информация
+  Команда и сроки
+  Бюджет
+  Дизайн
+  Frontend
+  Backend
+  Архитектура
+  Хостинг
+end note
+
+note right of ds
+  Те же 8 блоков;
+  Frontend и Backend
+  с уточнением
+  клиент / сервер
+end note
+
+note bottom of root
+  loader.py:
+  load_initial_question()
+  load_blocks(data, platform)
+end note
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml fig_4_1_evaluation_model
+' Рисунок 4.1 — Модель критериев оценки
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Рисунок 4.1 — Модель оценки эффективности системы
+
+rectangle "Эффективность\nинформационной системы" as ROOT #E8EAF6
+rectangle "Полнота\nрекомендаций" as C1 #E3F2FD
+rectangle "Релевантность\nвыдачи" as C2 #C8E6C9
+rectangle "Скорость\nформирования отчета" as C3 #FFF9C4
+rectangle "Удовлетворенность\nпользователя" as C4 #FFE0B2
+rectangle "Воспроизводимость\nрезультатов" as C5 #F8BBD0
+
+ROOT --> C1
+ROOT --> C2
+ROOT --> C3
+ROOT --> C4
+ROOT --> C5
+
+@enduml

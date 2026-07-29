@@ -1,0 +1,36 @@
+@startuml fig_3_4_generation_module_concept
+' Рисунок 3.4.1 — Концептуальная структура модуля генерации шаблонов
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+top to bottom direction
+
+title Рисунок 3.4.1 — Встраивание модуля генерации шаблонов\nв существующую систему
+
+rectangle "Существующая система" as EXIST #ECEFF1 {
+  rectangle "Опросник\nпараметры проекта" as A #E3F2FD
+  rectangle "Рекомендации\nстек + дизайн (MLP)" as REC #C5CAE9
+}
+
+rectangle "Перспективный модуль генерации" as NEW #F3E5F5 {
+  rectangle "Условный вектор\nпризнаков дизайна" as B #BBDEFB
+  rectangle "Генеративное ядро\ncGAN" as C #C8E6C9
+  rectangle "Макет интерфейса\n(wireframe)" as D #FFF9C4
+  rectangle "Постобработка\nlayout graph" as E #FFE0B2
+  rectangle "Экспорт\nJSON / Figma / HTML" as F #E1BEE7
+}
+
+A --> REC : текущий путь
+A --> B : новый путь
+B --> C
+C --> D
+D --> E
+E --> F
+
+note right of C
+  Управляемая генерация:
+  выход зависит от
+  условий проекта
+end note
+
+@enduml

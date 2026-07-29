@@ -1,0 +1,34 @@
+@startuml fig_4_2_testing_levels
+' Рисунок 4.2 — Двухуровневая схема тестирования
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+top to bottom direction
+
+title Рисунок 4.2 — Схема двухуровневого тестирования информационной системы
+
+rectangle "Проверка работоспособности\nинформационной системы" as ROOT #E8EAF6
+
+rectangle "White-box\n(модульное тестирование)" as WB #E3F2FD
+rectangle "Black-box\n(сценарии S1–S4)" as BB #C8E6C9
+rectangle "UX-оценка\n(опрос пользователей)" as UX #FFF9C4
+
+rectangle "SurveyEncoder\nmlp_model\nai_stub\nstack_info\nsite_analyzer\nAppState\nloader\nstorage" as MOD #BBDEFB
+rectangle "Landing / E-commerce\nSaaS / Desktop\n+ эталонные продукты" as SCN #A5D6A7
+rectangle "Понятность\nПолезность\nУдобство интерфейса" as UXM #FFE082
+
+rectangle "Вывод о работоспособности:\n49/49 модульных тестов OK;\nсценарии S1–S4 — полный отчёт" as OUT #F8BBD0
+
+ROOT --> WB
+ROOT --> BB
+ROOT --> UX
+
+WB --> MOD
+BB --> SCN
+UX --> UXM
+
+MOD --> OUT
+SCN --> OUT
+UXM --> OUT
+
+@enduml

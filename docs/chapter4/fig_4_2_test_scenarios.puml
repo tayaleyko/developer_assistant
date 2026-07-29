@@ -1,0 +1,21 @@
+@startuml fig_4_2_test_scenarios
+' Рисунок 4.3 — Тестовые сценарии S1–S4
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+top to bottom direction
+
+title Рисунок 4.3 — Набор сценариев интеграционной проверки (black-box)
+
+rectangle "S1: Landing\n→ gatsby_netlify\n0,07 с" as S1 #E3F2FD
+rectangle "S2: E-commerce\n→ nextjs_nestjs_pg\n0,06 с" as S2 #C8E6C9
+rectangle "S3: SaaS\n→ react_nestjs_pg\n0,06 с" as S3 #FFF9C4
+rectangle "S4: Desktop corp.\n→ dotnet_wpf\n0,06 с" as S4 #FFE0B2
+rectangle "Фиксация:\nstack + design + top3\n+ время + экспертная оценка" as R #E8EAF6
+
+S1 --> R
+S2 --> R
+S3 --> R
+S4 --> R
+
+@enduml

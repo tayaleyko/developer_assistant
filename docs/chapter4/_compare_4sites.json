@@ -1,0 +1,302 @@
+[
+  {
+    "key": "selectel",
+    "name": "Selectel (облачный провайдер B2B)",
+    "url": "https://www.selectel.ru",
+    "analyzer_score": 5,
+    "tech": {
+      "Фреймворк": "Nuxt.js (Vue)",
+      "Backend": "Не определён",
+      "БД": "Не определяется из HTML (зависит от бэкенда)",
+      "CDN": "Присутствует (провайдер не определён)",
+      "Хостинг": "Google Cloud",
+      "Аналитика": "Не обнаружена",
+      "Платёжная система": "Не обнаружена"
+    },
+    "design": {
+      "Шрифты": "Manrope, inherit, swiper-icons, ui-monospace, ui-sans-serif",
+      "UI-библиотека": "Ant Design",
+      "Тип навигации": "Расширенная навигация / мегаменю (191 ссылок)",
+      "Анимации": "Не обнаружены",
+      "Структура": "Требуется анализ sitemap.xml"
+    },
+    "palette": [
+      "#eae5e1",
+      "#8892c5",
+      "#dc6531",
+      "#1c9faa",
+      "#17272e"
+    ],
+    "offline_label": "nextjs_nestjs_pg",
+    "offline_p": 0.506940466222253,
+    "offline_time": 0.071,
+    "offline_top3": [
+      [
+        "nextjs_nestjs_pg",
+        0.506940466222253
+      ],
+      [
+        "vue_laravel_mysql",
+        0.058553786256137344
+      ],
+      [
+        "nextjs_vercel",
+        0.0581845319413663
+      ]
+    ],
+    "online_label": "nextjs_nestjs_pg",
+    "online_error": null,
+    "online_time": 6.791,
+    "online_palette": [
+      "#eae5e1",
+      "#8892c5",
+      "#dc6531",
+      "#1c9faa",
+      "#17272e"
+    ],
+    "offline_design_keys": [
+      "Шрифты",
+      "Палитра",
+      "Стиль",
+      "Навигация",
+      "Структура",
+      "Дополнительное",
+      "Тип навигации",
+      "Анимации",
+      "UI-библиотека"
+    ],
+    "offline_stack": {
+      "Frontend": "Next.js (React) — SSR, динамический контент",
+      "Backend": "NestJS (Node.js, TypeScript) — модульная архитектура",
+      "БД": "PostgreSQL (Prisma / TypeORM)",
+      "Хостинг": "Яндекс Облако / AWS / VPS с Docker",
+      "Аналитика": "Google Analytics / Яндекс.Метрика / Amplitude",
+      "Платежи": "ЮКасса / Stripe (интеграция через NestJS-модуль)"
+    }
+  },
+  {
+    "key": "netology",
+    "name": "Нетология (EdTech / SaaS)",
+    "url": "https://www.netology.ru",
+    "analyzer_score": 4,
+    "tech": {
+      "Фреймворк": "Next.js (React)",
+      "Backend": "Не определён",
+      "БД": "Не определяется из HTML (зависит от бэкенда)",
+      "CDN": "Не обнаружен",
+      "Хостинг": "Не определён",
+      "Аналитика": "Google Analytics, Яндекс.Метрика",
+      "Платёжная система": "Не обнаружена"
+    },
+    "design": {
+      "Шрифты": "Не определены",
+      "UI-библиотека": "Не определена",
+      "Тип навигации": "Стандартное горизонтальное меню (3 пунктов)",
+      "Анимации": "Не обнаружены",
+      "Структура": "Требуется анализ sitemap.xml"
+    },
+    "palette": [
+      "#f89112",
+      "#50b8e1",
+      "#18c973",
+      "#09a8fd",
+      "#987585"
+    ],
+    "offline_label": "nextjs_nestjs_pg",
+    "offline_p": 0.24557089325969306,
+    "offline_time": 0.073,
+    "offline_top3": [
+      [
+        "nextjs_nestjs_pg",
+        0.24557089325969306
+      ],
+      [
+        "react_nestjs_pg",
+        0.21175135370699616
+      ],
+      [
+        "react_fastapi_pg",
+        0.0766494305800647
+      ]
+    ],
+    "online_label": "nextjs_nestjs_pg",
+    "online_error": null,
+    "online_time": 5.792,
+    "online_palette": [
+      "#f89112",
+      "#50b8e1",
+      "#18c973",
+      "#09a8fd",
+      "#987585"
+    ],
+    "offline_design_keys": [
+      "Шрифты",
+      "Палитра",
+      "Стиль",
+      "Навигация",
+      "Структура",
+      "Дополнительное",
+      "Тип навигации",
+      "Анимации",
+      "UI-библиотека"
+    ],
+    "offline_stack": {
+      "Frontend": "Next.js (React) — SSR, динамический контент",
+      "Backend": "NestJS (Node.js, TypeScript) — модульная архитектура",
+      "БД": "PostgreSQL (Prisma / TypeORM)",
+      "Хостинг": "Яндекс Облако / AWS / VPS с Docker",
+      "Аналитика": "Google Analytics / Яндекс.Метрика / Amplitude",
+      "Платежи": "ЮКасса / Stripe (интеграция через NestJS-модуль)"
+    }
+  },
+  {
+    "key": "tilda",
+    "name": "Tilda (конструктор сайтов / SaaS)",
+    "url": "https://www.tilda.cc",
+    "analyzer_score": 5,
+    "tech": {
+      "Фреймворк": "Не определён",
+      "Backend": "Не определён",
+      "БД": "Не определяется из HTML (зависит от бэкенда)",
+      "CDN": "Не обнаружен",
+      "Хостинг": "Не определён",
+      "Аналитика": "Google Analytics",
+      "Платёжная система": "PayPal"
+    },
+    "design": {
+      "Шрифты": "Arial, TildaSans, var(--t-text-font",
+      "UI-библиотека": "Tailwind CSS",
+      "Тип навигации": "Стандартное горизонтальное меню (6 пунктов)",
+      "Анимации": "Не обнаружены",
+      "Структура": "Требуется анализ sitemap.xml"
+    },
+    "palette": [
+      "#f1f1f1",
+      "#c1c1c1",
+      "#fb8a6c",
+      "#506291",
+      "#201f20"
+    ],
+    "offline_label": "nextjs_nestjs_pg",
+    "offline_p": 0.459817317086027,
+    "offline_time": 0.072,
+    "offline_top3": [
+      [
+        "nextjs_nestjs_pg",
+        0.459817317086027
+      ],
+      [
+        "nextjs_django_pg",
+        0.08395912366168641
+      ],
+      [
+        "vue_laravel_mysql",
+        0.058717515936353964
+      ]
+    ],
+    "online_label": "nextjs_nestjs_pg",
+    "online_error": null,
+    "online_time": 5.325,
+    "online_palette": [
+      "#f1f1f1",
+      "#c1c1c1",
+      "#fb8a6c",
+      "#506291",
+      "#201f20"
+    ],
+    "offline_design_keys": [
+      "Шрифты",
+      "Палитра",
+      "Стиль",
+      "Навигация",
+      "Структура",
+      "Дополнительное",
+      "Тип навигации",
+      "Анимации",
+      "UI-библиотека"
+    ],
+    "offline_stack": {
+      "Frontend": "Next.js (React) — SSR, динамический контент",
+      "Backend": "NestJS (Node.js, TypeScript) — модульная архитектура",
+      "БД": "PostgreSQL (Prisma / TypeORM)",
+      "Хостинг": "Яндекс Облако / AWS / VPS с Docker",
+      "Аналитика": "Google Analytics / Яндекс.Метрика / Amplitude",
+      "Платежи": "ЮКасса / Stripe (интеграция через NestJS-модуль)"
+    }
+  },
+  {
+    "key": "tinkoff",
+    "name": "Т-Банк (финтех / корпоративный)",
+    "url": "https://www.tinkoff.ru",
+    "analyzer_score": 4,
+    "tech": {
+      "Фреймворк": "Не определён",
+      "Backend": "Не определён",
+      "БД": "Не определяется из HTML (зависит от бэкенда)",
+      "CDN": "Присутствует (провайдер не определён)",
+      "Хостинг": "Не определён",
+      "Аналитика": "Amplitude",
+      "Платёжная система": "Не обнаружена"
+    },
+    "design": {
+      "Шрифты": "TinkoffSans, dsHeading, dsHeading Fallback, dsText, dsText Fallback, haas, inherit",
+      "UI-библиотека": "Не определена",
+      "Тип навигации": "Расширенная навигация / мегаменю (184 ссылок)",
+      "Анимации": "Не обнаружены",
+      "Структура": "Требуется анализ sitemap.xml"
+    },
+    "palette": [
+      "#e6e5ef",
+      "#fdce29",
+      "#4481e5",
+      "#da2728",
+      "#303933"
+    ],
+    "offline_label": "nextjs_nestjs_pg",
+    "offline_p": 0.23469203734857877,
+    "offline_time": 0.072,
+    "offline_top3": [
+      [
+        "nextjs_nestjs_pg",
+        0.23469203734857877
+      ],
+      [
+        "react_nestjs_pg",
+        0.1607147618702888
+      ],
+      [
+        "react_fastapi_pg",
+        0.08227943514814814
+      ]
+    ],
+    "online_label": "nextjs_nestjs_pg",
+    "online_error": null,
+    "online_time": 7.087,
+    "online_palette": [
+      "#e6e5ef",
+      "#fdce29",
+      "#4481e5",
+      "#da2728",
+      "#303933"
+    ],
+    "offline_design_keys": [
+      "Шрифты",
+      "Палитра",
+      "Стиль",
+      "Навигация",
+      "Структура",
+      "Дополнительное",
+      "Тип навигации",
+      "Анимации",
+      "UI-библиотека"
+    ],
+    "offline_stack": {
+      "Frontend": "Next.js (React) — SSR, динамический контент",
+      "Backend": "NestJS (Node.js, TypeScript) — модульная архитектура",
+      "БД": "PostgreSQL (Prisma / TypeORM)",
+      "Хостинг": "Яндекс Облако / AWS / VPS с Docker",
+      "Аналитика": "Google Analytics / Яндекс.Метрика / Amplitude",
+      "Платежи": "ЮКасса / Stripe (интеграция через NestJS-модуль)"
+    }
+  }
+]

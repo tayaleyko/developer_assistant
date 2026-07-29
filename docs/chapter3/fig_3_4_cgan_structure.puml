@@ -1,0 +1,37 @@
+@startuml fig_3_4_cgan_structure
+' Рисунок 3.4.3 — Структура условной генерации cGAN
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Рисунок 3.4.3 — Внутренняя схема условной генерации\nна базе cGAN
+
+rectangle "Шум z" as Z #E1F5FE
+rectangle "Условие c\nпризнаки проекта" as CND #E8EAF6
+rectangle "Генератор G\nсверточная сеть" as GEN #C8E6C9
+rectangle "Синтетический\nUI-макет" as FAKE #FFF9C4
+rectangle "Реальный\nUI-макет" as REAL #FFECB3
+rectangle "Дискриминатор D\nreal / fake + условие" as DIS #FFCDD2
+
+rectangle "Потеря генератора\nобмануть D + условие" as LG #DCEDC8
+rectangle "Потеря дискриминатора\nразличить real / fake" as LD #F8BBD0
+
+Z --> GEN
+CND --> GEN
+GEN --> FAKE
+FAKE --> DIS
+REAL --> DIS
+CND --> DIS
+
+DIS --> LD
+DIS --> LG
+LG ..> GEN : обновление\nвесов G
+LD ..> DIS : обновление\nвесов D
+
+note bottom of GEN
+  G и D обучаются попеременно:
+  у каждого своя цель
+end note
+
+@enduml

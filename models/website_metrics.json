@@ -1,0 +1,22 @@
+{
+  "architecture": "75 → 128 → 64 → 12",
+  "parameters": 18764,
+  "lr": 0.001,
+  "alpha": 0.001,
+  "batch_size": 32,
+  "total_samples": 172,
+  "train_samples": 146,
+  "test_samples": 26,
+  "features": 75,
+  "classes": 12,
+  "epochs": "44 / 300",
+  "final_loss": 0.087808,
+  "train_accuracy": 0.9452,
+  "test_accuracy": 0.8077,
+  "overfit_gap": 0.1375,
+  "train_logloss": 0.298,
+  "test_logloss": 0.5096,
+  "precision_macro": 0.7889,
+  "recall_macro": 0.7917,
+  "f1_macro": 0.7772
+}

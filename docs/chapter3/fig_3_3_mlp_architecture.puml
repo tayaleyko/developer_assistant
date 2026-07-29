@@ -1,0 +1,96 @@
+@startuml fig_3_3_mlp_architecture
+' Рисунок 3.X — Архитектура многослойного перцептрона
+' Глава 3, §3.3 · классическая схема (схематичное представление)
+
+left to right direction
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam packageBorderStyle dashed
+skinparam packageBorderColor #8B0000
+skinparam packageFontColor #8B0000
+skinparam packageBackgroundColor white
+skinparam usecaseBackgroundColor white
+skinparam usecaseBorderColor black
+skinparam ArrowColor black
+skinparam ArrowThickness 1
+skinparam NoteBorderColor #8B0000
+skinparam NoteFontColor #8B0000
+
+title Рисунок 3.X — Архитектура MLP\n(website: 75 → 128 → 64 → 12)
+
+' ── Слои (пунктирные рамки, как в учебной схеме) ──
+
+package " " as P1 {
+  () " " as in0
+  () " " as in1
+  () " " as in2
+}
+note bottom of P1 : **входной слой**\n(n = 75)
+
+package " " as P2 {
+  () " " as h10
+  () " " as h11
+  () " " as h12
+}
+note bottom of P2 : **скрытый слой 1**\n128 · ReLU
+
+package " " as P3 {
+  () " " as h20
+  () " " as h21
+  () " " as h22
+}
+note bottom of P3 : **скрытый слой 2**\n64 · ReLU
+
+package " " as P4 {
+  () " " as out0
+  () " " as out1
+}
+note bottom of P4 : **выходной слой**\n12 · Softmax
+
+' ── Внешние входы / выход ──
+
+() " " as gin0 #white;line:white
+() " " as gin1 #white;line:white
+() " " as gout #white;line:white
+
+gin0 -right-> in0 : **вход**<sub>0</sub>
+gin1 -right-> in1 : **вход**<sub>1</sub>
+out0 -right-> gout : **выход**<sub>0</sub>
+
+' ── Полносвязные связи между слоями ──
+
+in0 --> h10
+in0 --> h11
+in0 --> h12
+in1 --> h10
+in1 --> h11
+in1 --> h12
+in2 --> h10
+in2 --> h11
+in2 --> h12
+
+h10 --> h20
+h10 --> h21
+h10 --> h22
+h11 --> h20
+h11 --> h21
+h11 --> h22
+h12 --> h20
+h12 --> h21
+h12 --> h22
+
+h20 --> out0
+h20 --> out1
+h21 --> out0
+h21 --> out1
+h22 --> out0
+h22 --> out1
+
+note as N1 #FFFDE7
+  Схема упрощена для наглядности.
+  Фактическая топология: **75 → 128 → 64 → 12**
+  (one-hot вектор ответов опроса)
+end note
+
+@enduml

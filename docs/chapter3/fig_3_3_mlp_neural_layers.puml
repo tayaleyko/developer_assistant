@@ -1,0 +1,80 @@
+@startuml fig_3_3_mlp_neural_layers
+' Рисунок 3.X — Структура многослойного перцептрона (website, tech-модель)
+' Глава 3, §3.3 · схема для защиты диплома
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam roundcorner 6
+skinparam ArrowThickness 2
+skinparam ArrowColor #37474F
+
+title Рисунок 3.X — Многослойный перцептрон (MLPClassifier)\nнаправление **website**, tech-модель: **75 → 128 → 64 → 12**
+
+' ── Входной слой ──
+together {
+  rectangle "x₁" as x1 #E3F2FD
+  rectangle "x₂" as x2 #E3F2FD
+  rectangle "..." as xd #E3F2FD
+  rectangle "x₇₅" as x75 #E3F2FD
+}
+rectangle "**Входной слой**\n75 признаков\n(one-hot ответов)" as IN #E3F2FD
+
+x1 -[hidden]down- x2
+x2 -[hidden]down- xd
+xd -[hidden]down- x75
+
+' ── Скрытые слои ──
+rectangle "**Скрытый слой 1**\n128 нейронов\nh₁ = ReLU(W₁·x + b₁)" as H1 #C8E6C9
+
+rectangle "**Скрытый слой 2**\n64 нейрона\nh₂ = ReLU(W₂·h₁ + b₂)" as H2 #A5D6A7
+
+' ── Выходной слой ──
+together {
+  rectangle "ŷ₁" as y1 #FFF9C4
+  rectangle "ŷ₂" as y2 #FFF9C4
+  rectangle "..." as yd #FFF9C4
+  rectangle "ŷ₁₂" as y12 #FFF9C4
+}
+rectangle "**Выходной слой**\n12 классов (стеков)\nsoftmax(W₃·h₂ + b₃)" as OUT #FFF9C4
+
+y1 -[hidden]down- y2
+y2 -[hidden]down- yd
+yd -[hidden]down- y12
+
+' ── Связи между слоями ──
+IN -right-> H1 : **W₁** (75×128)\n**b₁** (128)
+H1 -right-> H2 : **W₂** (128×64)\n**b₂** (64)
+H2 -right-> OUT : **W₃** (64×12)\n**b₃** (12)
+
+note top of IN
+  **SurveyEncoder.encode_answers()**
+  pandas.get_dummies → reindex → вектор X
+end note
+
+note bottom of OUT
+  **Выход:** вероятности по классам
+  predict_proba → top-3 стека
+  argmax → рекомендуемый стек
+end note
+
+note as N_params
+  **Обучаемых параметров:** ~18 764
+  **Функция потерь:** cross-entropy
+  **Оптимизатор:** Adam (lr=0.001)
+  **Регуляризация:** L2 (α=0.001)
+  **Остановка:** early stopping
+end note
+
+N_params .. H1
+
+legend right
+  |= Слой |= Размерность |= Активация |
+  | Вход | 75 | — |
+  | Скрытый 1 | 128 | ReLU |
+  | Скрытый 2 | 64 | ReLU |
+  | Выход | 12 | Softmax |
+  **desktop tech:** 59 → 128 → 64 → 8
+  **design website:** 40 → 128 → 64 → 12
+endlegend
+
+@enduml

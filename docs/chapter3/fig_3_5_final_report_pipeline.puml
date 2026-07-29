@@ -1,0 +1,26 @@
+@startuml fig_3_5_final_report_pipeline
+' Рисунок 3.5.1 — Формирование итогового отчета
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Рисунок 3.5.1 — Пайплайн формирования итоговых рекомендаций
+
+rectangle "answers\n(AppState)" as A #E3F2FD
+rectangle "ai_stub\nget_offline_result /\nget_online_result" as B #C8E6C9
+rectangle "mlp_model\npredict_stack(_ensemble)" as C #C5CAE9
+rectangle "stack_info\nget_stack + get_design" as D #FFF9C4
+rectangle "site_analyzer\n(опционально)" as E #FFCDD2
+rectangle "ResultScreen\nкарточки отчета" as F #E8EAF6
+
+A --> B
+B --> C
+B --> D
+B --> E : online mode
+C --> B
+D --> B
+E --> B
+B --> F
+
+@enduml

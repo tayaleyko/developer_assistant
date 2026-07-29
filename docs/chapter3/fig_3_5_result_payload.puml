@@ -1,0 +1,28 @@
+@startuml fig_3_5_result_payload
+' Рисунок 3.5.2 — Структура итогового словаря результата
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+
+title Рисунок 3.5.2 — Структура итогового результата\nдля отображения в ResultScreen
+
+object "result (offline)" as O1 {
+  label
+  stack {}
+  design {}
+  top3 []
+}
+
+object "result (online)" as O2 {
+  label
+  stack {}
+  design {}
+  similar_sites []
+  site_analysis {}
+  palette []
+  error
+}
+
+O1 --> O2 : расширение полей\nв онлайн-режиме
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml fig_4_3_comparison_flow
+' Рисунок 4.3 — Сравнение с неструктурированным LLM-запросом
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Рисунок 4.3 — Сравнение двух подходов получения рекомендаций
+
+rectangle "Подход A:\nструктурированный опрос\n+ MLP + справочник" as A #C8E6C9
+rectangle "Подход B:\nсвободный запрос\nк LLM" as B #FFCDD2
+rectangle "Сравниваемые параметры:\nполнота, релевантность,\nвоспроизводимость, скорость" as C #E8EAF6
+
+A --> C
+B --> C
+
+@enduml

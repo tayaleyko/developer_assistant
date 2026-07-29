@@ -1,0 +1,19 @@
+@startuml fig_user_journey_simple
+' Горизонтальная схема для слайда (5 шагов)
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+left to right direction
+
+title Путь пользователя
+
+rectangle "Старт" as A #E3F2FD
+rectangle "Тип\nпроекта" as B #E3F2FD
+rectangle "Опрос\n(8 блоков)" as C #C5CAE9
+rectangle "Отчёт" as D #C8E6C9
+rectangle "Конец" as E #FFE0B2
+
+A --> B --> C --> D --> E
+C ..> C : другие блоки
+
+@enduml

@@ -1,0 +1,81 @@
+@startuml user_journey
+' Путь пользователя: от запуска до отчёта
+' Экспорт PNG → презентация / глава 2–3
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam ArrowColor #455A64
+
+title Путь пользователя в приложении\n«Ассистент разработчика»
+
+actor "Пользователь\n(разработчик)" as USER #E3F2FD
+
+rectangle "1. Старт\nHomeScreen" as S1 #E8EAF6
+rectangle "2. Тип проекта\nProjectTypeScreen" as S2 #E3F2FD
+rectangle "3. Выбор блока\nBlockSelectScreen" as S3 #C5CAE9
+
+together {
+  rectangle "**8 блоков опроса**\n(questions.json)" as BLOCKS #FFF9C4 {
+    card "1. Общая информация"
+    card "2. Команда и сроки"
+    card "3. Бюджет"
+    card "4. Дизайн"
+    card "5. Frontend"
+    card "6. Backend"
+    card "7. Архитектура"
+    card "8. Хостинг"
+  }
+}
+
+rectangle "4. Вопросы блока\nQuizScreen" as S4 #BBDEFB
+database "Ответы\nAppState" as ANS #ECEFF1
+rectangle "5. Итог\nResultScreen" as S5 #C8E6C9
+
+rectangle "Offline\n~0,06 с" as OFF #E8F5E9
+rectangle "Online «с AI»\n~5–8 с" as ON #FFEBEE
+
+rectangle "Отчёт" as REP #FFFFFF {
+  card "Стек (6 полей)"
+  card "Дизайн (9 полей)"
+  card "Top-3 + вероятности"
+  card "Online: анализ URL,\nпалитра, похожие сайты"
+}
+
+USER --> S1 : «Начать»
+S1 --> S2
+S2 --> S3 : website\nили desktop
+
+S3 --> S4 : выбрать\nблок
+S4 --> ANS : сохранить\nответы
+ANS --> S3 : вернуться\nк списку блоков
+
+S3 ..> ANS : «Сохранить»\n→ progress.json
+
+S3 --> S5 : «Далее»\n(≥ 1 блок\nзавершён)
+
+S5 --> OFF : по умолчанию
+S5 --> ON : переключатель\n(нужен URL + сеть)
+
+OFF --> REP : MLP +\nstack_info
+ON --> REP : site_analyzer\n+ MLP
+
+REP --> USER : рекомендации
+S5 --> S1 : «В начало»\n(новая сессия)
+
+note bottom of S3
+  Блоки можно проходить
+  **в любом порядке**,
+  не обязательно все 8
+end note
+
+note bottom of OFF
+  predict_stack_ensemble
+  get_offline_result()
+end note
+
+note bottom of ON
+  get_online_result()
+  URL: w4 / d5, палитра: w_d4
+end note
+
+@enduml

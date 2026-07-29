@@ -1,0 +1,43 @@
+@startuml fig_user_journey
+' Суть работы системы (компактная схема)
+
+skinparam shadowing false
+skinparam defaultFontName "Segoe UI"
+skinparam ActivityBackgroundColor #E3F2FD
+
+title «Ассистент разработчика» — суть работы
+
+|Пользователь|
+start
+:Старт → выбор\n**website / desktop**;
+
+repeat
+  :Блок опроса → ответы;
+  |Система|
+  :**AppState**;
+  |Пользователь|
+repeat while (Ещё блоки?) is (да)
+->нет;
+
+note right
+  8 блоков · «Далее»
+  при ≥1 завершённом
+end note
+
+:«Далее» → **ResultScreen**;
+
+|Система|
+:Offline: **Encoder → MLP → stack_info**\nстек + дизайн + top-3;
+
+|Пользователь|
+if (Режим с AI?) then (да)
+  |Система|
+  :Online: **site_analyzer**\nURL → tech + палитра;
+  |Пользователь|
+else (offline)
+endif
+
+:Просмотр отчёта;
+stop
+
+@enduml
