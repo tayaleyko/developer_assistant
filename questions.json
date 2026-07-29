@@ -1,0 +1,1895 @@
+{
+  "initialQuestion": {
+    "id": "platform",
+    "text": "Что вы хотите создать?",
+    "type": "single",
+    "options": [
+      { "value": "website", "label": "Сайт" },
+      { "value": "desktop", "label": "Десктопное приложение" }
+    ]
+  },
+
+  "website": {
+    "blocks": [
+      {
+        "id": "general",
+        "title": "Общая информация",
+        "order": 1,
+        "questions": [
+          {
+            "id": "w1",
+            "text": "Тип проекта",
+            "type": "single",
+            "options": [
+              { "value": "commercial", "label": "Коммерческий" },
+              { "value": "government", "label": "Государственный" },
+              { "value": "nonprofit", "label": "Некоммерческий" }
+            ]
+          },
+          {
+            "id": "w2",
+            "text": "Какой сайт вы хотите сделать?",
+            "type": "single",
+            "options": [
+              { "value": "landing", "label": "Лендинг", "hint": "одностраничный сайт-визитка или реклама продукта" },
+              { "value": "corporate", "label": "Корпоративный сайт", "hint": "сайт компании с разделами «О нас», «Услуги», «Контакты»" },
+              { "value": "ecommerce", "label": "Интернет-магазин", "hint": "сайт с каталогом товаров и корзиной" },
+              { "value": "news", "label": "Новостной портал", "hint": "сайт со статьями, лентой новостей" },
+              { "value": "saas", "label": "SaaS-платформа", "hint": "сервис, которым пользуются онлайн по подписке (как Figma, Notion)" },
+              { "value": "blog", "label": "Личный блог", "hint": "персональный сайт автора" }
+            ]
+          },
+          {
+            "id": "w3",
+            "text": "Где будут находиться ваши пользователи?",
+            "type": "single",
+            "options": [
+              { "value": "russia", "label": "Только в России" },
+              { "value": "abroad", "label": "Только за рубежом" },
+              { "value": "both", "label": "В России и за рубежом" }
+            ]
+          },
+          {
+            "id": "w4",
+            "text": "Есть ли пример или аналог сайта, на который хотите ориентироваться?",
+            "type": "single",
+            "hasTextInput": true,
+            "options": [
+              { "value": "no", "label": "Нет, создаём с нуля" },
+              { "value": "yes", "label": "Да", "textPlaceholder": "Укажите URL" }
+            ]
+          },
+          {
+            "id": "w_g5",
+            "text": "Нужна ли поддержка нескольких языков на сайте?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, только один язык" },
+              { "value": "2", "label": "Два языка (например, RU + EN)" },
+              { "value": "many", "label": "Три и более языков" }
+            ]
+          },
+          {
+            "id": "w_g6",
+            "text": "Кто будет целевой аудитория сайта?",
+            "type": "single",
+            "options": [
+              { "value": "b2c", "label": "Обычные пользователи (B2C)" },
+              { "value": "b2b", "label": "Бизнес-клиенты (B2B)" },
+              { "value": "both", "label": "И те, и другие" }
+            ]
+          },
+          {
+            "id": "w_g7",
+            "text": "Есть ли уже зарегистрированный домен?",
+            "type": "single",
+            "hasTextInput": true,
+            "options": [
+              { "value": "yes", "label": "Да", "textPlaceholder": "Укажите домен, например example.ru" },
+              { "value": "no", "label": "Нет, нужно выбрать и зарегистрировать" }
+            ]
+          },
+          {
+            "id": "w_g8",
+            "text": "Предполагается ли в дальнейшем монетизация сайта?",
+            "type": "multiple",
+            "options": [
+              { "value": "none", "label": "Нет" },
+              { "value": "ads", "label": "Реклама" },
+              { "value": "subscription", "label": "Подписка" },
+              { "value": "sales", "label": "Продажа товаров / услуг" },
+              { "value": "other", "label": "Другое" }
+            ]
+          },
+          {
+            "id": "w_g9",
+            "text": "Нужна ли форма обратной связи или онлайн-чат поддержки?",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "form", "label": "Форма обратной связи" },
+              { "value": "chat", "label": "Онлайн-чат (например, JivoSite, Bitrix24)" },
+              { "value": "callback", "label": "Заказ обратного звонка" }
+            ]
+          },
+          {
+            "id": "w_g10",
+            "text": "Нужен ли раздел с документами или юридической информацией?",
+            "hint": "политика конфиденциальности, пользовательское соглашение, оферта",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, нужно подготовить и разместить" },
+              { "value": "have", "label": "Есть готовые, нужно только разместить" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "title": "Команда и сроки",
+        "order": 2,
+        "questions": [
+          {
+            "id": "w5",
+            "text": "Количество разработчиков в команде",
+            "type": "single",
+            "options": [
+              { "value": "1", "label": "1" },
+              { "value": "2-5", "label": "2–5" },
+              { "value": "6+", "label": "6+" }
+            ]
+          },
+          {
+            "id": "w6",
+            "text": "Желаемый срок разработки",
+            "type": "single",
+            "options": [
+              { "value": "1month", "label": "До 1 месяца" },
+              { "value": "1-3months", "label": "1–3 месяца" },
+              { "value": "3-6months", "label": "3–6 месяцев" },
+              { "value": "6+months", "label": "Более 6 месяцев" },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "w_t3",
+            "text": "Какие роли уже есть в команде?",
+            "hint": "Можно выбрать несколько",
+            "type": "multiple",
+            "options": [
+              { "value": "frontend", "label": "Frontend-разработчик" },
+              { "value": "backend", "label": "Backend-разработчик" },
+              { "value": "designer", "label": "Дизайнер" },
+              { "value": "pm", "label": "Менеджер проекта" },
+              { "value": "devops", "label": "DevOps / системный администратор" },
+              { "value": "qa", "label": "Тестировщик (QA)" },
+              { "value": "none", "label": "Пока никого нет" }
+            ]
+          },
+          {
+            "id": "w_t4",
+            "text": "Каков формат работы команды?",
+            "type": "single",
+            "options": [
+              { "value": "inhouse", "label": "Штатные сотрудники / в офисе" },
+              { "value": "remote", "label": "Удалённая команда" },
+              { "value": "freelance", "label": "Фрилансеры" },
+              { "value": "agency", "label": "Передаём на аутсорс агентству" }
+            ]
+          },
+          {
+            "id": "w_t5",
+            "text": "По какой методологии планируете вести разработку?",
+            "type": "single",
+            "options": [
+              { "value": "agile", "label": "Agile / Scrum / Kanban" },
+              { "value": "waterfall", "label": "Waterfall (последовательная)" },
+              { "value": "unknown", "label": "Не знаю / не важно" }
+            ]
+          },
+          {
+            "id": "w_t6",
+            "text": "Нужно ли вести техническую документацию проекта?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, обязательно" },
+              { "value": "basic", "label": "Только базовая (README, комментарии в коде)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_t7",
+            "text": "Нужно ли тестирование перед запуском?",
+            "type": "multiple",
+            "options": [
+              { "value": "manual", "label": "Ручное тестирование" },
+              { "value": "unit", "label": "Unit-тесты" },
+              { "value": "e2e", "label": "End-to-end тесты (автоматизированные)" },
+              { "value": "load", "label": "Нагрузочное тестирование" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_t8",
+            "text": "Нужен ли CI/CD (автоматическая сборка и деплой при изменениях кода)?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет, выкладываем вручную" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_t9",
+            "text": "Где будет храниться код проекта?",
+            "type": "single",
+            "options": [
+              { "value": "github", "label": "GitHub" },
+              { "value": "gitlab", "label": "GitLab" },
+              { "value": "bitbucket", "label": "Bitbucket" },
+              { "value": "other", "label": "Другой сервис" },
+              { "value": "unknown", "label": "Ещё не определились" }
+            ]
+          },
+          {
+            "id": "w_t10",
+            "text": "Нужно ли приёмочное тестирование с участием заказчика перед финальным запуском?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Бюджет",
+        "order": 3,
+        "questions": [
+          {
+            "id": "w7",
+            "text": "Бюджет на разработку",
+            "type": "single",
+            "options": [
+              { "value": "50k", "label": "До 50к руб." },
+              { "value": "50-300k", "label": "50–300к руб." },
+              { "value": "300k-1m", "label": "300к–1млн руб." },
+              { "value": "1m+", "label": "Более 1 млн руб." },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "w8",
+            "text": "Сколько готовы тратить на поддержание сайта каждый месяц?",
+            "hint": "аренда сервера, домен, обслуживание",
+            "type": "single",
+            "options": [
+              { "value": "1k", "label": "До 1к руб." },
+              { "value": "1-5k", "label": "1–5к руб." },
+              { "value": "5-20k", "label": "5–20к руб." },
+              { "value": "20k+", "label": "Более 20к руб." },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "w_b3",
+            "text": "Предусмотрен ли бюджет на дизайн (UI/UX)?",
+            "type": "single",
+            "options": [
+              { "value": "included", "label": "Да, включён в общий бюджет" },
+              { "value": "separate", "label": "Да, выделен отдельно" },
+              { "value": "no", "label": "Нет, используем готовые шаблоны" }
+            ]
+          },
+          {
+            "id": "w_b4",
+            "text": "Предусмотрен ли бюджет на платные библиотеки, плагины или сторонние сервисы?",
+            "hint": "например, платные UI-компоненты, сервисы email-рассылки, SMS-шлюзы",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет, только open-source решения" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_b5",
+            "text": "Нужна ли поддержка и доработка после запуска?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, сдали и всё" },
+              { "value": "bugs", "label": "Только исправление ошибок" },
+              { "value": "ongoing", "label": "Да, регулярные доработки и развитие" }
+            ]
+          },
+          {
+            "id": "w_b6",
+            "text": "Есть ли бюджет на маркетинг и продвижение сайта после запуска?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Пока не определились" }
+            ]
+          },
+          {
+            "id": "w_b7",
+            "text": "Предусмотрен ли бюджет на безопасность и защиту сайта?",
+            "hint": "SSL-сертификат, защита от DDoS, аудит уязвимостей",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, выделена отдельная статья" },
+              { "value": "basic", "label": "Только базовые бесплатные меры" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_b8",
+            "text": "Ожидаете ли возврат инвестиций (ROI) от проекта?",
+            "type": "single",
+            "options": [
+              { "value": "yes_short", "label": "Да, в течен��е года" },
+              { "value": "yes_long", "label": "Да, в долгосрочной перспективе" },
+              { "value": "no", "label": "Нет, проект некоммерческий" },
+              { "value": "unknown", "label": "Не считали" }
+            ]
+          },
+          {
+            "id": "w_b9",
+            "text": "Есть ли риск, что бюджет может быть урезан в ходе разработки?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, бюджет зафиксирован" },
+              { "value": "maybe", "label": "Возможно" },
+              { "value": "yes", "label": "Да, нужно предусмотреть MVP-вариант" }
+            ]
+          },
+          {
+            "id": "w_b10",
+            "text": "Предусмотрен ли бюджет на QA / тестирование?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, отдельная строка в бюджете" },
+              { "value": "included", "label": "Включено в стоимость разработки" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Дизайн",
+        "order": 4,
+        "questions": [
+          {
+            "id": "w_d0",
+            "text": "К какой сфере относится ваш проект?",
+            "hint": "Влияет на рекомендации по цвету, шрифту и стилю",
+            "type": "single",
+            "options": [
+              { "value": "finance",    "label": "Финансы / Банк / Страхование" },
+              { "value": "medical",    "label": "Медицина / Здоровье" },
+              { "value": "ecommerce",  "label": "Интернет-торговля / Retail" },
+              { "value": "tech",       "label": "IT / SaaS / Технологии" },
+              { "value": "education",  "label": "Образование" },
+              { "value": "ecology",    "label": "Экология / Устойчивое развитие" },
+              { "value": "realty",     "label": "Недвижимость / Строительство" },
+              { "value": "food",       "label": "Еда / Рестораны / Доставка" },
+              { "value": "creative",   "label": "Творчество / Искусство / Медиа" },
+              { "value": "gov",        "label": "Государственный / НКО" },
+              { "value": "other",      "label": "Другое" }
+            ]
+          },
+          {
+            "id": "w_d1",
+            "text": "Есть ли у вас логотип?",
+            "type": "single",
+            "allowUpload": true,
+            "options": [
+              { "value": "yes", "label": "Да, готовый логотип", "upload": true },
+              { "value": "no",  "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_d2",
+            "text": "Есть ли фирменные цвета (брендбук)?",
+            "type": "single",
+            "hasTextInput": true,
+            "options": [
+              { "value": "yes",    "label": "Да, есть утверждённая палитра", "textPlaceholder": "Укажите HEX-коды, например #1A73E8" },
+              { "value": "no", "label": "Нет, нужно подобрать под сферу" }
+            ]
+          },
+          {
+            "id": "w_d3",
+            "text": "Есть ли фирменный шрифт?",
+            "type": "single",
+            "allowUpload": true,
+            "hasTextInput": true,
+            "options": [
+              { "value": "yes", "label": "Да, есть утверждённый шрифт", "textPlaceholder": "Укажите название или загрузите файл", "upload": true },
+              { "value": "no",  "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_d4",
+            "text": "Есть ли пример или аналог сайта, который вам нравится по цветовой палитре?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, есть", "textPlaceholder": "Укажите URL-ссылку" },
+              { "value": "no",  "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_d5",
+            "text": "Какой стиль дизайна предпочтителен?",
+            "type": "single",
+            "options": [
+              { "value": "minimalist", "label": "Минималистичный",        "hint": "много воздуха, нейтральные цвета, акцент на контент" },
+              { "value": "corporate",  "label": "Корпоративный / строгий","hint": "сдержанная палитра, чёткая структура, доверие" },
+              { "value": "creative",   "label": "Яркий / творческий",     "hint": "нестандартная раскладка, анимации, смелые цвета" },
+              { "value": "friendly",   "label": "Дружелюбный / мягкий",   "hint": "скруглённые формы, тёплые цвета, иллюстрации" },
+              { "value": "similar",    "label": "Как у аналога",          "hint": "укажите URL в вопросе про аналог" },
+              { "value": "unknown",    "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_d6",
+            "text": "Сколько страниц планируется на сайте?",
+            "hint": "Влияет на структуру навигации",
+            "type": "single",
+            "options": [
+              { "value": "1",     "label": "Одна (лендинг)" },
+              { "value": "2-5",   "label": "2–5 страниц" },
+              { "value": "6-15",  "label": "6–15 страниц" },
+              { "value": "16-50", "label": "16–50 страниц" },
+              { "value": "50+",   "label": "Более 50 страниц" }
+            ]
+          },
+          {
+            "id": "w_d7",
+            "text": "Какой тип навигации предпочтителен?",
+            "hint": "Можно не знать — порекомендуем исходя из объёма и сферы",
+            "type": "single",
+            "options": [
+              { "value": "top",      "label": "Горизонтальное меню сверху" },
+              { "value": "sidebar",  "label": "Боковое меню (sidebar)" },
+              { "value": "burger",   "label": "Бургер-меню (скрытое)" },
+              { "value": "unknown",  "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_d8",
+            "text": "Нужна ли тёмная тема?",
+            "type": "single",
+            "options": [
+              { "value": "yes",      "label": "Да" },
+              { "value": "optional", "label": "Желательно" },
+              { "value": "no",       "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_d9",
+            "text": "Нужны ли анимации и интерактивные эффекты?",
+            "type": "single",
+            "options": [
+              { "value": "no",     "label": "Нет, только статичный дизайн" },
+              { "value": "subtle", "label": "Да, ненавязчивые (hover, scroll-trigger)" },
+              { "value": "rich",   "label": "Да, сложные анимации (Lottie, GSAP)" }
+            ]
+          },
+          {
+            "id": "w_d10",
+            "text": "Нужно ли соблюдать требования доступности (WCAG)?",
+            "hint": "Контраст 4.5:1, навигация с клавиатуры, alt-тексты",
+            "type": "single",
+            "options": [
+              { "value": "yes",  "label": "Да, обязательно (уровень AA)" },
+              { "value": "nice", "label": "Желательно, но не критично" },
+              { "value": "no",   "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_d11",
+            "text": "Планируется ли использование готовой UI-библиотеки?",
+            "hint": "Material UI, Ant Design, shadcn/ui, Bootstrap",
+            "type": "single",
+            "options": [
+              { "value": "yes",     "label": "Да, используем готовую библиотеку" },
+              { "value": "custom",  "label": "Нет, пишем компоненты с нуля" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend",
+        "order": 5,
+        "questions": [
+          {
+            "id": "w12",
+            "text": "Важно ли, чтобы сайт хорошо находился через поисковики (Google, Яндекс)?",
+            "type": "single",
+            "options": [
+              { "value": "critical", "label": "Да, это критично – нам важен трафик из поиска" },
+              { "value": "nice", "label": "Желательно, но не обязательно" },
+              { "value": "no", "label": "Нет, трафик идёт из других источников" }
+            ]
+          },
+          {
+            "id": "w13",
+            "text": "Нужна ли мобильная версия или приложение?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "responsive", "label": "Достаточно адаптивного дизайна под телефон" },
+              { "value": "app", "label": "Нужно полноценное мобильное приложение в будущем" }
+            ]
+          },
+          {
+            "id": "w_fe3",
+            "text": "Какой тип рендеринга предпочтителен?",
+            "hint": "влияет на SEO и скорость загрузки",
+            "type": "single",
+            "options": [
+              { "value": "ssr", "label": "SSR (серверный рендеринг)", "hint": "быстрая загрузка, хорош для SEO" },
+              { "value": "ssg", "label": "SSG (статическая генерация)", "hint": "максимальная скорость, подходит для контентных сайтов" },
+              { "value": "spa", "label": "SPA (одностраничное приложение)", "hint": "подходит для веб-приложений, хуже для SEO" },
+              { "value": "unknown", "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_fe4",
+            "text": "Есть ли предпочтения по frontend-фреймворку?",
+            "type": "single",
+            "options": [
+              { "value": "react", "label": "React / Next.js" },
+              { "value": "vue", "label": "Vue.js / Nuxt.js" },
+              { "value": "angular", "label": "Angular" },
+              { "value": "vanilla", "label": "Чистый HTML/CSS/JS (без фреймворка)" },
+              { "value": "unknown", "label": "Нет предпочтений, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_fe5",
+            "text": "Нужна ли поддержка устаревших браузеров?",
+            "hint": "например, Internet Explorer, старые версии Safari",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да (аудитория использует старые браузеры)" },
+              { "value": "no", "label": "Нет, только современные браузеры" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_fe6",
+            "text": "Нужна ли веб-аналитика (отслеживание поведения пользователей)?",
+            "type": "multiple",
+            "options": [
+              { "value": "ga", "label": "Google Analytics" },
+              { "value": "metrika", "label": "Яндекс.Метрика" },
+              { "value": "hotjar", "label": "Hotjar / тепловые карты" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_fe7",
+            "text": "Нужна ли PWA (Progressive Web App) поддержка?",
+            "hint": "возможность установить сайт как приложение на телефон",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_fe8",
+            "text": "Нужна ли работа с картами?",
+            "hint": "например, отображение адресов, маршрутов",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "yandex", "label": "Да, Яндекс.Карты" },
+              { "value": "google", "label": "Да, Google Maps" },
+              { "value": "other", "label": "Да, другой картографический сервис" }
+            ]
+          },
+          {
+            "id": "w_fe9",
+            "text": "Нужна ли поддержка офлайн-режима (кэширование страниц)?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_fe10",
+            "text": "Нужна ли интеграция с социальными сетями?",
+            "hint": "кнопки «Поделиться», виджеты — авторизацию через соцсети см. в блоке Backend",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "share", "label": "Кнопки «Поделиться»" },
+              { "value": "feed", "label": "Лента постов из соцсетей" },
+              { "value": "pixel", "label": "Пиксели ретаргетинга (VK, Meta)" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Backend",
+        "order": 6,
+        "questions": [
+          {
+            "id": "w14",
+            "text": "Нужна ли авторизация / личный кабинет?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "basic", "label": "Базовая (логин и пароль)" },
+              { "value": "extended", "label": "Расширенная (роли пользователей, вход через Google/VK)" }
+            ]
+          },
+          {
+            "id": "w15",
+            "text": "Нужна ли интеграция с платёжными системами?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "russia", "label": "Да (Россия: ЮКасса, Тинькофф)" },
+              { "value": "international", "label": "Да (зарубеж: Stripe, PayPal)" },
+              { "value": "both", "label": "Оба варианта" }
+            ]
+          },
+          {
+            "id": "w_be3",
+            "text": "Есть ли предпочтения по backend-технологии?",
+            "type": "single",
+            "options": [
+              { "value": "node", "label": "Node.js (Express / NestJS)" },
+              { "value": "python", "label": "Python (Django / FastAPI)" },
+              { "value": "php", "label": "PHP (Laravel / Bitrix)" },
+              { "value": "java", "label": "Java / Kotlin (Spring)" },
+              { "value": "dotnet", "label": ".NET (C#)" },
+              { "value": "unknown", "label": "Нет предпочтений, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_be6",
+            "text": "Нужна ли отправка email-уведомлений или SMS?",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "email", "label": "Email (регистрация, уведомления, рассылки)" },
+              { "value": "sms", "label": "SMS (подтверждение, уведомления)" },
+              { "value": "push", "label": "Push-уведомления в браузере" }
+            ]
+          },
+          {
+            "id": "w_be7",
+            "text": "Нужно ли хранение и обработка файлов (изображения, документы, видео)?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "small", "label": "Да, небольшие файлы (аватары, изображения)" },
+              { "value": "large", "label": "Да, большие файлы (видео, архивы, документы)" }
+            ]
+          },
+          {
+            "id": "w_be8",
+            "text": "Нужен ли поиск по контенту сайта?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "basic", "label": "Простой поиск (базовый SQL LIKE)" },
+              { "value": "fulltext", "label": "Полнотекстовый поиск (Elasticsearch, Typesense)" }
+            ]
+          },
+          {
+            "id": "w_be9",
+            "text": "Нужна ли интеграция со сторонними сервисами или API?",
+            "hint": "например, CRM, 1С, службы доставки, карты",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "crm", "label": "CRM (amoCRM, Bitrix24)" },
+              { "value": "1c", "label": "1С" },
+              { "value": "delivery", "label": "Службы доставки (СДЭК, Почта России)" },
+              { "value": "other", "label": "Другое" }
+            ]
+          },
+          {
+            "id": "w_be10",
+            "text": "Нужна ли административная панель для управления контентом и данными?",
+            "hint": "редактирование текстов, товаров, пользователей без программиста",
+            "type": "single",
+            "options": [
+              { "value": "yes_custom", "label": "Да, полностью кастомная" },
+              { "value": "yes_ready", "label": "Да, подойдёт готовая (например, Django Admin, AdminJS)" },
+              { "value": "yes_cms", "label": "Да, хочу полноценную CMS (WordPress, 1С-Битрикс)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Архитектура проекта",
+        "order": 7,
+        "questions": [
+          {
+            "id": "w16",
+            "text": "Планируете ли развивать и расширять проект?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, проект фиксированный" },
+              { "value": "maybe", "label": "Возможно через 1–2 года" },
+              { "value": "yes", "label": "Да, уже планируем активный рост" }
+            ]
+          },
+          {
+            "id": "w17",
+            "text": "Сколько людей будет заходить на сайт в день?",
+            "type": "single",
+            "options": [
+              { "value": "1k", "label": "До 1 000" },
+              { "value": "1-50k", "label": "1 000–50 000" },
+              { "value": "50-500k", "label": "50 000–500 000" },
+              { "value": "500k+", "label": "Более 500 000" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_ar3",
+            "text": "Какой тип архитектуры предпочтителен?",
+            "type": "single",
+            "options": [
+              { "value": "monolith", "label": "Монолит", "hint": "всё в одном приложении — проще для старта" },
+              { "value": "microservices", "label": "Микросервисы", "hint": "отдельные сервисы — сложнее, но гибче при росте" },
+              { "value": "serverless", "label": "Serverless", "hint": "функции по требованию, оплата только за использование" },
+              { "value": "unknown", "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "w_ar4",
+            "text": "Нужно ли кэширование данных для ускорения работы сайта?",
+            "hint": "Redis, Memcached и т.п.",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_ar5",
+            "text": "Нужна ли очередь задач для фоновой обработки?",
+            "hint": "например, отправка писем, генерация отчётов, обработка изображений",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_ar6",
+            "text": "Нужна ли реал-тайм функциональность?",
+            "hint": "чат, уведомления, обновление данных без перезагрузки страницы",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_ar7",
+            "text": "Нужно ли резервное копирование данных?",
+            "type": "single",
+            "options": [
+              { "value": "auto_daily", "label": "Да, автоматически каждый день" },
+              { "value": "manual", "label": "Да, ручное по необходимости" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_ar8",
+            "text": "Нужен ли мониторинг ошибок в коде и логирование событий приложения?",
+            "hint": "Sentry, ELK, Grafana и т.п. — фиксируют ошибки и аномалии в работе кода",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Только базовые логи в файлах" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_ar9",
+            "text": "Нужен ли CDN для ускорения загрузки статических файлов?",
+            "hint": "изображения, CSS, JS — отдаются с ближайшего сервера к пользователю",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_ar10",
+            "text": "Нужна ли защита от спама и ботов на формах?",
+            "hint": "CAPTCHA, reCAPTCHA, Яндекс SmartCaptcha, honeypot-поля",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Да, базовая (rate limiting)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hosting",
+        "title": "Хостинг и инфраструктура",
+        "order": 8,
+        "questions": [
+          {
+            "id": "w18",
+            "text": "Есть ли требования по закону хранить данные пользователей только в России? (152-ФЗ)",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, данные должны быть в России" },
+              { "value": "no", "label": "Нет таких требований" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w19",
+            "text": "Где хотите размещать сайт?",
+            "type": "single",
+            "options": [
+              { "value": "simple", "label": "Хочу простое решение – залить и забыть", "hint": "подходит для небольших сайтов" },
+              { "value": "vps", "label": "Арендованный сервер (VPS/VDS)", "hint": "полный контроль, дешевле при росте" },
+              { "value": "cloud_international", "label": "Крупное облако (AWS, Google Cloud)" },
+              { "value": "cloud_russia", "label": "Российское облако (Яндекс Облако, VK Cloud)" },
+              { "value": "own", "label": "Собственный сервер в офисе" },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "w20",
+            "text": "Критично ли, чтобы сайт работал 24/7 без остановок?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, кратковременные остановки допустимы" },
+              { "value": "prefer", "label": "Желательно минимизировать простои" },
+              { "value": "critical", "label": "Да, сайт должен работать всегда – каждая минута простоя = потери" }
+            ]
+          },
+          {
+            "id": "w_h4",
+            "text": "Нужна ли возможность горизонтального масштабирования?",
+            "hint": "добавление новых серверов при росте нагрузки",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_h5",
+            "text": "Нужна ли контейнеризация приложения?",
+            "hint": "Docker, Kubernetes",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_h6",
+            "text": "Нужна ли настройка нескольких окружений?",
+            "hint": "development, staging, production",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, все три" },
+              { "value": "basic", "label": "Только dev и prod" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_h7",
+            "text": "Нужна ли защита персональных данных пользователей (GDPR)?",
+            "hint": "для сайтов с европейскими пользователями — cookie-баннер, право на удаление данных",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, GDPR (европейские пользователи)" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_h8",
+            "text": "Планируется ли использование балансировщика нагрузки?",
+            "hint": "Nginx, HAProxy, облачный балансировщик — распределяет запросы между серверами",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "w_h9",
+            "text": "Нужен ли мониторинг доступности серверов и оповещения при сбоях?",
+            "hint": "Uptime Robot, Grafana, Zabbix — следят за тем, что сервер живой и отвечает",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Простое оповещение о недоступности (uptime monitor)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "w_h10",
+            "text": "Нужна ли защита от DDoS-атак?",
+            "hint": "Cloudflare, Яндекс DDoS Guard — фильтруют вредоносный трафик до попадания на сервер",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, это критично" },
+              { "value": "basic", "label": "Да, базовый уровень защиты" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "desktop": {
+    "blocks": [
+      {
+        "id": "general",
+        "title": "Общая информация",
+        "order": 1,
+        "questions": [
+          {
+            "id": "d1",
+            "text": "Тип проекта",
+            "type": "single",
+            "options": [
+              { "value": "commercial", "label": "Коммерческий" },
+              { "value": "government", "label": "Государственный" },
+              { "value": "nonprofit", "label": "Некоммерческий" }
+            ]
+          },
+          {
+            "id": "d2",
+            "text": "Какое приложение вы хотите сделать?",
+            "type": "single",
+            "options": [
+              { "value": "corporate", "label": "Корпоративный инструмент", "hint": "CRM, ERP, внутренняя система" },
+              { "value": "editor", "label": "Редактор / творческий инструмент", "hint": "работа с фото, видео, текстом" },
+              { "value": "utility", "label": "Утилита", "hint": "небольшая программа для конкретной задачи" },
+              { "value": "game", "label": "Игра" },
+              { "value": "other", "label": "Другое" }
+            ]
+          },
+          {
+            "id": "d3",
+            "text": "Для каких операционных систем?",
+            "hint": "Можно выбрать несколько вариантов ответа",
+            "type": "multiple",
+            "options": [
+              { "value": "windows", "label": "Windows" },
+              { "value": "macos", "label": "macOS" },
+              { "value": "linux", "label": "Linux" }
+            ]
+          },
+          {
+            "id": "d4",
+            "text": "Где будут находиться ваши пользователи?",
+            "type": "single",
+            "options": [
+              { "value": "russia", "label": "Только в России" },
+              { "value": "abroad", "label": "Только за рубежом" },
+              { "value": "both", "label": "В России и за рубежом" }
+            ]
+          },
+          {
+            "id": "d5",
+            "text": "Есть ли пример или аналог приложения, на которое хотите ориентироваться?",
+            "type": "single",
+            "hasTextInput": true,
+            "options": [
+              { "value": "no", "label": "Нет, создаём с нуля" },
+              { "value": "yes", "label": "Да", "textPlaceholder": "Укажите название или ссылку" }
+            ]
+          },
+          {
+            "id": "d_g6",
+            "text": "Кто будет целевой аудитория приложения?",
+            "type": "single",
+            "options": [
+              { "value": "b2c", "label": "Обычные пользователи (B2C)" },
+              { "value": "b2b", "label": "Бизнес / корпоративный сектор (B2B)" },
+              { "value": "internal", "label": "Только внутри нашей компании" }
+            ]
+          },
+          {
+            "id": "d_g7",
+            "text": "Как приложение будет распространяться?",
+            "type": "single",
+            "options": [
+              { "value": "store", "label": "Через магазин (Microsoft Store, Mac App Store)" },
+              { "value": "website", "label": "Скачивание с сайта" },
+              { "value": "internal", "label": "Внутреннее распространение внутри компании" },
+              { "value": "unknown", "label": "Ещё не определились" }
+            ]
+          },
+          {
+            "id": "d_g8",
+            "text": "Нужна ли поддержка нескольких языков?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, только один язык" },
+              { "value": "2", "label": "Два языка (RU + EN)" },
+              { "value": "many", "label": "Три и более языков" }
+            ]
+          },
+          {
+            "id": "d_g9",
+            "text": "Нужна ли система автоматического обновления приложения?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, обновление в фоне без участия пользователя" },
+              { "value": "notify", "label": "Уведомление о новой версии, обновление вручную" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_g10",
+            "text": "Нужна ли защита кода от декомпиляции / обфускация?",
+            "hint": "важно для коммерческих продуктов",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "title": "Команда и сроки",
+        "order": 2,
+        "questions": [
+          {
+            "id": "d6",
+            "text": "Количество разработчиков в команде",
+            "type": "single",
+            "options": [
+              { "value": "1", "label": "1" },
+              { "value": "2-5", "label": "2–5" },
+              { "value": "6+", "label": "6+" }
+            ]
+          },
+          {
+            "id": "d7",
+            "text": "Желаемый срок разработки",
+            "type": "single",
+            "options": [
+              { "value": "1month", "label": "До 1 месяца" },
+              { "value": "1-3months", "label": "1–3 месяца" },
+              { "value": "3-6months", "label": "3–6 месяцев" },
+              { "value": "6+months", "label": "Более 6 месяцев" },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "d_t3",
+            "text": "Какие роли уже есть в команде?",
+            "hint": "Можно выбрать несколько",
+            "type": "multiple",
+            "options": [
+              { "value": "frontend", "label": "Frontend / UI-разработчик" },
+              { "value": "backend", "label": "Backend-разработчик" },
+              { "value": "designer", "label": "Дизайнер" },
+              { "value": "pm", "label": "Менеджер проекта" },
+              { "value": "devops", "label": "DevOps / системный администратор" },
+              { "value": "qa", "label": "Тестировщик (QA)" },
+              { "value": "none", "label": "Пока никого нет" }
+            ]
+          },
+          {
+            "id": "d_t4",
+            "text": "Каков формат работы команды?",
+            "type": "single",
+            "options": [
+              { "value": "inhouse", "label": "Штатные сотрудники / в офисе" },
+              { "value": "remote", "label": "Удалённая команда" },
+              { "value": "freelance", "label": "Фрилансеры" },
+              { "value": "agency", "label": "Передаём на аутсорс агентству" }
+            ]
+          },
+          {
+            "id": "d_t5",
+            "text": "По какой методологии планируете вести разработку?",
+            "type": "single",
+            "options": [
+              { "value": "agile", "label": "Agile / Scrum / Kanban" },
+              { "value": "waterfall", "label": "Waterfall (последовательная)" },
+              { "value": "unknown", "label": "Не знаю / не важно" }
+            ]
+          },
+          {
+            "id": "d_t6",
+            "text": "Нужно ли вести техническую документацию проекта?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, обязательно" },
+              { "value": "basic", "label": "Только базовая (README, комментарии)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_t7",
+            "text": "Нужно ли тестирование перед запуском?",
+            "type": "multiple",
+            "options": [
+              { "value": "manual", "label": "Ручное тестирование" },
+              { "value": "unit", "label": "Unit-тесты" },
+              { "value": "e2e", "label": "End-to-end тесты" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_t8",
+            "text": "Нужен ли CI/CD (автоматическая сборка и деплой)?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_t9",
+            "text": "Где будет храниться код проекта?",
+            "type": "single",
+            "options": [
+              { "value": "github", "label": "GitHub" },
+              { "value": "gitlab", "label": "GitLab" },
+              { "value": "bitbucket", "label": "Bitbucket" },
+              { "value": "other", "label": "Другой сервис" },
+              { "value": "unknown", "label": "Ещё не определились" }
+            ]
+          },
+          {
+            "id": "d_t10",
+            "text": "Нужно ли приёмочное тестирование с участием заказчика или бета-пользователей?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Бюджет",
+        "order": 3,
+        "questions": [
+          {
+            "id": "d8",
+            "text": "Бюджет на разработку",
+            "type": "single",
+            "options": [
+              { "value": "100k", "label": "До 100к руб." },
+              { "value": "100-500k", "label": "100–500к руб." },
+              { "value": "500k-3m", "label": "500к–3млн руб." },
+              { "value": "3m+", "label": "Более 3 млн руб." },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "d9",
+            "text": "Сколько готовы тратить на поддержание каждый месяц?",
+            "hint": "если нужен сервер, лицензии",
+            "type": "single",
+            "options": [
+              { "value": "0", "label": "Ничего – приложение полностью автономное" },
+              { "value": "5k", "label": "До 5к руб." },
+              { "value": "5-30k", "label": "5–30к руб." },
+              { "value": "30k+", "label": "Более 30к руб." },
+              { "value": "any", "label": "Не важно" }
+            ]
+          },
+          {
+            "id": "d_b3",
+            "text": "Предусмотрен ли бюджет на дизайн (UI/UX)?",
+            "type": "single",
+            "options": [
+              { "value": "included", "label": "Да, включён в общий бюджет" },
+              { "value": "separate", "label": "Да, выделен отдельно" },
+              { "value": "no", "label": "Нет, используем готовые компоненты / шаблоны" }
+            ]
+          },
+          {
+            "id": "d_b4",
+            "text": "Предусмотрен ли бюджет на платные библиотеки, SDK или инструменты?",
+            "hint": "например, платные UI-компоненты, коммерческие лицензии",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет, только open-source" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_b5",
+            "text": "Нужна ли поддержка и доработка после запуска?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "bugs", "label": "Только исправление ошибок" },
+              { "value": "ongoing", "label": "Да, регулярные обновления и новые функции" }
+            ]
+          },
+          {
+            "id": "d_b6",
+            "text": "Нужен ли бюджет на инфраструктуру для дистрибуции (подписи кода, нотаризация)?",
+            "hint": "для macOS нужна нотаризация Apple, для Windows — подпись кода (Code Signing)",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_b7",
+            "text": "Ожидаете ли возврат инвестиций (ROI)?",
+            "type": "single",
+            "options": [
+              { "value": "yes_short", "label": "Да, в течение года" },
+              { "value": "yes_long", "label": "Да, в долгосрочной перспективе" },
+              { "value": "no", "label": "Нет, проект некоммерческий / внутренний" }
+            ]
+          },
+          {
+            "id": "d_b8",
+            "text": "Есть ли риск, что бюджет может быть ур��зан в ходе разработки?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, бюджет зафиксирован" },
+              { "value": "maybe", "label": "Возможно" },
+              { "value": "yes", "label": "Да, нужно предусмотреть MVP-вариант" }
+            ]
+          },
+          {
+            "id": "d_b9",
+            "text": "Нужен ли бюджет на QA / тестирование?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, отдельная строка в бюджете" },
+              { "value": "included", "label": "Включено в стоимость разработки" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_b10",
+            "text": "Предусмотрен ли бюджет на маркетинг и продвижение приложения?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Пока не определились" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Дизайн",
+        "order": 4,
+        "questions": [
+          {
+            "id": "d_d0",
+            "text": "К какой сфере относится ваш проект?",
+            "hint": "Влияет на рекомендации по цвету, шрифту и стилю",
+            "type": "single",
+            "options": [
+              { "value": "finance",    "label": "Финансы / Учёт / ERP" },
+              { "value": "medical",    "label": "Медицина / Здоровье" },
+              { "value": "creative",   "label": "Творчество / Медиа / Редактор" },
+              { "value": "tech",       "label": "IT / Разработка / DevTools" },
+              { "value": "education",  "label": "Образование" },
+              { "value": "corporate",  "label": "Корпоративный инструмент / CRM" },
+              { "value": "game",       "label": "Игра" },
+              { "value": "utility",    "label": "Утилита / Системный инструмент" },
+              { "value": "other",      "label": "Другое" }
+            ]
+          },
+          {
+            "id": "d_d1",
+            "text": "Есть ли у вас логотип или иконка приложения?",
+            "type": "single",
+            "allowUpload": true,
+            "options": [
+              { "value": "yes", "label": "Да, готовая иконка", "upload": true },
+              { "value": "no",  "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_d2",
+            "text": "Есть ли фирменные цвета?",
+            "type": "single",
+            "hasTextInput": true,
+            "options": [
+              { "value": "yes",    "label": "Да, есть палитра", "textPlaceholder": "Укажите HEX-коды" },
+              { "value": "select", "label": "Нет, подберём под сферу" }
+            ]
+          },
+          {
+            "id": "d_d3",
+            "text": "Под какую дизайн-систему проектируем?",
+            "hint": "Определяет компоненты, шрифты и поведение элементов",
+            "type": "single",
+            "options": [
+              { "value": "fluent",      "label": "Fluent Design (Windows-стиль)" },
+              { "value": "macos_hig",   "label": "macOS HIG (Apple-стиль)" },
+              { "value": "material",    "label": "Material Design 3 (Google-стиль)" },
+              { "value": "custom",      "label": "Кастомный дизайн" },
+              { "value": "unknown",     "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_d4",
+            "text": "Есть ли готовые макеты или прототипы?",
+            "type": "single",
+            "options": [
+              { "value": "figma",  "label": "Да, макеты в Figma / Sketch" },
+              { "value": "sketch", "label": "Да, примерные наброски" },
+              { "value": "no",     "label": "Нет, дизайн с нуля" }
+            ]
+          },
+          {
+            "id": "d_d5",
+            "text": "Какой тип навигации планируется?",
+            "hint": "Зависит от количества разделов и сложности приложения",
+            "type": "single",
+            "options": [
+              { "value": "tabs",    "label": "Вкладки (Tab bar)",             "hint": "до 5 разделов" },
+              { "value": "sidebar", "label": "Боковая панель (Sidebar)",      "hint": "5–15 разделов" },
+              { "value": "tree",    "label": "Дерево навигации (Tree view)",  "hint": "глубокая иерархия" },
+              { "value": "ribbon",  "label": "Ribbon (как в MS Office)" },
+              { "value": "unknown", "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_d6",
+            "text": "Нужна ли тёмная тема?",
+            "type": "single",
+            "options": [
+              { "value": "yes",      "label": "Да" },
+              { "value": "optional", "label": "Желательно" },
+              { "value": "no",       "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_d7",
+            "text": "Нужны ли анимации и переходы?",
+            "type": "single",
+            "options": [
+              { "value": "no",     "label": "Нет, только статичный интерфейс" },
+              { "value": "subtle", "label": "Да, ненавязчивые системные анимации" },
+              { "value": "rich",   "label": "Да, насыщенные анимации важны" }
+            ]
+          },
+          {
+            "id": "d_d8",
+            "text": "Нужно ли соблюдать требования доступности?",
+            "hint": "Поддержка скринридеров (Narrator, VoiceOver), навигация с клавиатуры, высокий контраст",
+            "type": "single",
+            "options": [
+              { "value": "yes",  "label": "Да, обязательно" },
+              { "value": "nice", "label": "Желательно" },
+              { "value": "no",   "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_d9",
+            "text": "Нужна ли адаптация под разные разрешения и DPI?",
+            "hint": "4K-мониторы, HiDPI, Retina — векторные иконки, масштаб 100%/150%/200%",
+            "type": "single",
+            "options": [
+              { "value": "yes",   "label": "Да" },
+              { "value": "basic", "label": "Только стандартные разрешения" },
+              { "value": "no",    "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_d10",
+            "text": "Нужен ли онбординг для новых пользователей?",
+            "hint": "Feature tour, интерактивный гайд или пустой экран с подсказкой",
+            "type": "single",
+            "options": [
+              { "value": "full",     "label": "Да, полноценный обучающий тур" },
+              { "value": "tooltips", "label": "Да, подсказки и тултипы" },
+              { "value": "no",       "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend (клиентская часть)",
+        "order": 5,
+        "questions": [
+          {
+            "id": "d13",
+            "text": "Должно ли приложение работать без интернета?",
+            "type": "single",
+            "options": [
+              { "value": "full", "label": "Да, полностью офлайн" },
+              { "value": "partial", "label": "Частично" },
+              { "value": "no", "label": "Нет, всегда онлайн" }
+            ]
+          },
+          {
+            "id": "d14",
+            "text": "Нужна ли работа с тяжёлыми вычислениями или графикой?",
+            "hint": "3D, видео, AI, большие таблицы",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "moderate", "label": "Умеренная нагрузка" },
+              { "value": "heavy", "label": "Да, высокая производительность критична" }
+            ]
+          },
+          {
+            "id": "d15",
+            "text": "Нужен ли доступ к файлам, принтерам или другому оборудованию на компьютере?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "filesystem", "label": "Да, работа с файловой системой" },
+              { "value": "hardware", "label": "Да, подключение к оборудованию (принтеры, сканеры, COM-порты)" }
+            ]
+          },
+          {
+            "id": "d_fe4",
+            "text": "Есть ли предпочтения по технологии разработки UI?",
+            "hint": "определяет и выбор UI-компонентов, и стек в целом",
+            "type": "single",
+            "options": [
+              { "value": "electron", "label": "Electron (HTML/CSS/JS)", "hint": "кроссплатформенный, знакомый веб-разработчикам" },
+              { "value": "tauri", "label": "Tauri (Rust + Web)", "hint": "лёгкий, быстрый, безопасный" },
+              { "value": "wpf", "label": "WPF / WinForms (.NET, только Windows)" },
+              { "value": "qt", "label": "Qt (C++)", "hint": "мощный, кроссплатформенный" },
+              { "value": "flutter", "label": "Flutter (Dart)", "hint": "кроссплатформенный, красивый UI" },
+              { "value": "unknown", "label": "Нет предпочтений, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_fe5",
+            "text": "Нужна ли работа с буфером обмена (clipboard) системы?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_fe6",
+            "text": "Нужны ли глобальные горячие клавиши и системные хоткеи?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_fe7",
+            "text": "Нужна ли поддержка плагинов или расширений от сторонних разработчиков?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, приложение должно быть расширяемым" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_fe8",
+            "text": "Нужен ли системный трей (иконка в трее, фоновая работа)?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, приложение работает в фоне" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_fe9",
+            "text": "Нужны ли системные уведомления ОС (нотификации)?",
+            "hint": "всплывающие уведомления от приложения в трее / центре уведомлений системы",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_fe10",
+            "text": "Нужна ли встроенная справка или онбординг для новых пользователей?",
+            "type": "single",
+            "options": [
+              { "value": "full", "label": "Да, полноценный обучающий тур" },
+              { "value": "tooltips", "label": "Да, подсказки и тултипы" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Backend (серверная часть)",
+        "order": 6,
+        "questions": [
+          {
+            "id": "d16",
+            "text": "Нужен ли сервер или синхронизация данных между пользователями?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, приложение автономное" },
+              { "value": "baas", "label": "Хочу готовое облачное решение (Firebase, Supabase)" },
+              { "value": "yes", "label": "Да, нужен собственный сервер" }
+            ]
+          },
+          {
+            "id": "d17",
+            "text": "Нужна ли авторизация / личный кабинет?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "basic", "label": "Базовая" },
+              { "value": "extended", "label": "Расширенная (роли, корпоративный вход)" }
+            ]
+          },
+          {
+            "id": "d18",
+            "text": "Нужна ли оплата или лицензирование?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет, бесплатное" },
+              { "value": "onetime", "label": "Разовая покупка" },
+              { "value": "subscription", "label": "Подписка" }
+            ]
+          },
+          {
+            "id": "d_be4",
+            "text": "Есть ли предпочтения по backend-технологии?",
+            "type": "single",
+            "options": [
+              { "value": "node", "label": "Node.js (Express / NestJS)" },
+              { "value": "python", "label": "Python (Django / FastAPI)" },
+              { "value": "dotnet", "label": ".NET (C#)" },
+              { "value": "java", "label": "Java / Kotlin (Spring)" },
+              { "value": "unknown", "label": "Нет предпочтений, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_be5",
+            "text": "Какая база данных предпочтительна?",
+            "type": "single",
+            "options": [
+              { "value": "postgres", "label": "PostgreSQL" },
+              { "value": "mysql", "label": "MySQL / MariaDB" },
+              { "value": "sqlite", "label": "SQLite (встроенная, для локального хранения)" },
+              { "value": "mongo", "label": "MongoDB" },
+              { "value": "unknown", "label": "Нет предпочтений, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_be6",
+            "text": "Нужна ли интеграция со сторонними API или корпоративными системами?",
+            "hint": "например, 1С, CRM, ERP, облачные хранилища",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "crm", "label": "CRM (amoCRM, Bitrix24)" },
+              { "value": "1c", "label": "1С" },
+              { "value": "cloud_storage", "label": "Облачные хранилища (S3, Google Drive)" },
+              { "value": "other", "label": "Другое" }
+            ]
+          },
+          {
+            "id": "d_be7",
+            "text": "Нужно ли API для взаимодействия с другими системами или мобильным приложением?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, нужно публичное API" },
+              { "value": "internal", "label": "Только внутреннее API" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_be8",
+            "text": "Нужна ли система сбора телеметрии / аналитики использования приложения?",
+            "hint": "какие функции используют, где возникают ошибки в поведении пользователей",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_be9",
+            "text": "Нужно ли резервное копирование данных пользователей?",
+            "type": "single",
+            "options": [
+              { "value": "auto", "label": "Да, автоматически на сервере" },
+              { "value": "manual", "label": "Да, пользователь делает экспорт вручную" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_be10",
+            "text": "Нужна ли защита API от несанкционированного доступа?",
+            "hint": "API-ключи, JWT-токены, OAuth 2.0",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Базовая (API-ключи)" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "title": "Архитектура проекта",
+        "order": 7,
+        "questions": [
+          {
+            "id": "d19",
+            "text": "Планируете ли развивать и расширять проект?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "maybe", "label": "Возможно через 1–2 года" },
+              { "value": "yes", "label": "Да, активный рост" }
+            ]
+          },
+          {
+            "id": "d_ar2",
+            "text": "Какой тип архитектуры приложения предпочтителен?",
+            "type": "single",
+            "options": [
+              { "value": "monolith", "label": "Монолит", "hint": "всё в одном — проще для старта" },
+              { "value": "layered", "label": "Слоистая (MVC / MVVM)", "hint": "стандартная для десктопных приложений" },
+              { "value": "microservices", "label": "Микросервисы", "hint": "если серверная часть сложная" },
+              { "value": "unknown", "label": "Не знаю, нужна рекомендация" }
+            ]
+          },
+          {
+            "id": "d_ar3",
+            "text": "Нужна ли многопоточность или асинхронная обработка данных?",
+            "hint": "например, фоновая загрузка файлов, параллельные вычисления",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_ar4",
+            "text": "Нужна ли история изменений (undo/redo) для действий пользователя?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_ar5",
+            "text": "Нужна ли возможность совместной работы нескольких пользователей?",
+            "hint": "одновременное редактирование одного документа / проекта",
+            "type": "single",
+            "options": [
+              { "value": "yes_realtime", "label": "Да, в реальном времени (как Google Docs)" },
+              { "value": "yes_async", "label": "Да, но с ручной синхронизацией" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_ar6",
+            "text": "Нужен ли мониторинг ошибок в коде и crash-репорты?",
+            "hint": "Sentry, Crashpad — фиксируют падения приложения с деталями для разработчика",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Только базовое логирование в файл" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_ar7",
+            "text": "Нужна ли защита данных пользователя на устройстве?",
+            "hint": "шифрование локальной базы данных, Keychain / Windows Credential Manager",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, данные должны быть зашифрованы" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_ar8",
+            "text": "Нужна ли поддержка работы с несколькими окнами или вкладками?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет, одно окно" }
+            ]
+          },
+          {
+            "id": "d_ar9",
+            "text": "Нужна ли поддержка сценариев / скриптов для автоматизации внутри приложения?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_ar10",
+            "text": "Нужен ли импорт / экспорт данных в стандартные форматы?",
+            "hint": "CSV, Excel, PDF, JSON, XML",
+            "type": "multiple",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "csv", "label": "CSV / Excel" },
+              { "value": "pdf", "label": "PDF" },
+              { "value": "json_xml", "label": "JSON / XML" },
+              { "value": "other", "label": "Другой формат" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hosting",
+        "title": "Хостинг и инфраструктура",
+        "order": 8,
+        "questions": [
+          {
+            "id": "d_h1",
+            "text": "Нужна ли защита персональных данных пользователей (GDPR / 152-ФЗ)?",
+            "type": "single",
+            "options": [
+              { "value": "gdpr", "label": "Да, GDPR (европейские пользователи)" },
+              { "value": "russia", "label": "Да, по российскому законодательству (152-ФЗ)" },
+              { "value": "both", "label": "Оба требования" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d21",
+            "text": "Критично ли, чтобы серверная часть работала без остановок?",
+            "type": "single",
+            "options": [
+              { "value": "no", "label": "Нет" },
+              { "value": "prefer", "label": "Желательно" },
+              { "value": "critical", "label": "Да, приложение используется 24/7" }
+            ]
+          },
+          {
+            "id": "d_h3",
+            "text": "Где будет размещаться серверная часть (если нужна)?",
+            "type": "single",
+            "options": [
+              { "value": "cloud_russia", "label": "Российское облако (Яндекс Облако, VK Cloud)" },
+              { "value": "cloud_international", "label": "Международное облако (AWS, Azure, GCP)" },
+              { "value": "vps", "label": "Арендованный VPS/VDS" },
+              { "value": "own", "label": "Собственный сервер" },
+              { "value": "baas", "label": "BaaS (Firebase, Supabase)" },
+              { "value": "none", "label": "Сервер не нужен" }
+            ]
+          },
+          {
+            "id": "d_h4",
+            "text": "Нужна ли контейнеризация серверной части?",
+            "hint": "Docker, Kubernetes",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_h5",
+            "text": "Нужен ли CI/CD для сборки и публикации новых версий приложения?",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, автоматически" },
+              { "value": "no", "label": "Нет, сборка вручную" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_h6",
+            "text": "Нужна ли настройка нескольких окружений?",
+            "hint": "development, staging, production",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да, все три" },
+              { "value": "basic", "label": "Только dev и prod" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_h7",
+            "text": "Нужен ли мониторинг доступности серверной части и оповещения при сбоях?",
+            "hint": "следит за тем, что сервер живой и отвечает — Uptime Robot, Grafana",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "basic", "label": "Только базовый uptime-мониторинг" },
+              { "value": "no", "label": "Нет" }
+            ]
+          },
+          {
+            "id": "d_h8",
+            "text": "Нужна ли цифровая подпись дистрибутива приложения?",
+            "hint": "Code Signing сертификат — без него Windows/macOS показывают предупреждение при установке",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_h9",
+            "text": "Нужна ли стратегия отката к предыдущей версии при критическом баге после обновления?",
+            "hint": "rollback — возможность вернуть пользователей на старую версию",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "no", "label": "Нет" },
+              { "value": "unknown", "label": "Не знаю" }
+            ]
+          },
+          {
+            "id": "d_h10",
+            "text": "Нужна ли система управления лицензиями и активациями приложения?",
+            "hint": "серверная проверка лицензионного ключа, ограничение числа устройств",
+            "type": "single",
+            "options": [
+              { "value": "yes", "label": "Да" },
+              { "value": "offline", "label": "Да, но с офлайн-активацией" },
+              { "value": "no", "label": "Нет" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
